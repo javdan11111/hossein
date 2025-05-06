@@ -1,137 +1,129 @@
-
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سایت شخصی حسین</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            direction: rtl;
-        }
+  <meta charset="UTF-8">
+  <title>سایتی برای شادی</title>
+  <link href="https://cdn.fontcdn.ir/Font/Persian/IranNastaliq/IranNastaliq.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', Tahoma, sans-serif;
+      direction: rtl;
+      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      background-color: #0097a7;
+      color: white;
+      padding: 20px;
+      margin: 0;
+      font-size: 28px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .menu {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .menu button {
+      padding: 12px 24px;
+      margin: 8px;
+      border: none;
+      border-radius: 25px;
+      background-color: #00acc1;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    .menu button:hover {
+      background-color: #007c91;
+    }
+    .section {
+      background-color: white;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      display: none;
+    }
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+    button[type="submit"] {
+      background-color: #009688;
+    }
+    .nastaliq {
+      font-family: 'IranNastaliq', serif;
+      font-size: 24px;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = ["hossein", "selma", "contact", "game"];
+      sections.forEach(sec => {
+        document.getElementById(sec).style.display = "none";
+      });
+      document.getElementById(id).style.display = "block";
+    }
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        nav {
-            background-color: #333;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-
-        nav a:hover {
-            color: #4CAF50;
-        }
-
-        .container {
-            margin-top: 50px;
-        }
-
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 5px solid #4CAF50;
-            margin-bottom: 20px;
-        }
-
-        .content {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-        }
-
-        .section {
-            display: none;
-        }
-
-        .active {
-            display: block;
-        }
-    </style>
+    let secret = Math.floor(Math.random() * 10) + 1;
+    function checkGuess() {
+      const guess = parseInt(document.getElementById("guess").value);
+      const result = document.getElementById("result");
+      if (guess === secret) {
+        result.innerText = "آفرین درست حدس زدی!";
+      } else {
+        result.innerText = "نه! دوباره تلاش کن.";
+      }
+    }
+  </script>
 </head>
 <body>
 
-<header>
-    <h1>سایت شخصی حسین</h1>
-</header>
+  <h1>سایتی برای شادی</h1>
 
-<nav>
-    <a href="#" onclick="showSection('about-me')">درباره من</a>
-    <a href="#" onclick="showSection('about-salma')">درباره سلما</a>
-</nav>
+  <div class="menu">
+    <button onclick="showSection('hossein')">درباره حسین</button>
+    <button onclick="showSection('selma')">درباره سلما</button>
+    <button onclick="showSection('game')">بازی کن!</button>
+    <button onclick="showSection('contact')">تماس با من</button>
+  </div>
 
-<div class="container">
-    <!-- بخش درباره من -->
-    <div id="about-me" class="content section active">
-        <img src="https://via.placeholder.com/150" alt="حسین" class="profile-pic">
-        <h2>درباره من</h2>
-        <p>
-            سلام! من حسین هستم. من ۱۴ سال دارم و در کلاس نهم تحصیل می‌کنم. 
-            خیلی علاقه‌مند به یادگیری تکنولوژی و برنامه‌نویسی هستم. 
-            همیشه در تلاش برای بهبود مهارت‌های خودم و یاد گرفتن چیزهای جدید هستم.
-        </p>
-    </div>
+  <div id="hossein" class="section">
+    <h2>درباره حسین</h2>
+    <p>سلام من حسین هستم. به سایت من خوش اومدین! من می‌خوام داخل این سایت برای شما یک بازی قرار بدم که باهاش سرگرم بشید و لذت ببرید.</p>
+  </div>
 
-    <!-- بخش درباره سلما -->
-    <div id="about-salma" class="content section">
-        <img src="https://via.placeholder.com/150" alt="سلما" class="profile-pic">
-        <h2>درباره سلما</h2>
-        <p>
-            سلام! من **سلما** هستم. من نقاشی کردن رو خیلی دوست دارم و همیشه وقت فراغت خودم رو به نقاشی اختصاص میدم.
-            فردا آخرین روز مدرسه‌ام است و خیلی هیجان‌زده هستم!
-        </p>
-    </div>
-</div>
+  <div id="selma" class="section">
+    <h2>درباره سلما</h2>
+    <p class="nastaliq">سلام من سلما هستم، خواهر حسین و حسین بهترین برادر دنیاست.</p>
+  </div>
 
-<footer>
-    <p>تمامی حقوق برای حسین و سلما محفوظ است &copy; 2025</p>
-</footer>
+  <div id="game" class="section">
+    <h2>بازی حدس عدد</h2>
+    <p>یک عدد بین ۱ تا ۱۰ حدس بزن:</p>
+    <input type="number" id="guess" min="1" max="10">
+    <button onclick="checkGuess()">بررسی</button>
+    <p id="result"></p>
+  </div>
 
-<script>
-    function showSection(sectionId) {
-        // پنهان کردن تمام بخش‌ها
-        const sections = document.querySelectorAll('.section');
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
-
-        // نمایش بخش انتخاب شده
-        const selectedSection = document.getElementById(sectionId);
-        selectedSection.classList.add('active');
-    }
-</script>
+  <div id="contact" class="section">
+    <h2>تماس با من</h2>
+    <p>می‌توانید با ایمیل من تماس بگیرید: <a href="mailto:hjavdan61@gmail.com">hjavdan61@gmail.com</a></p>
+    <form action="https://formsubmit.co/hossein@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="نام شما" required><br>
+      <input type="email" name="email" placeholder="ایمیل شما" required><br>
+      <textarea name="message" placeholder="پیامت رو اینجا بنویس" required></textarea><br>
+      <button type="submit">ارسال پیام</button>
+    </form>
+  </div>
 
 </body>
 </html>
