@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت شخصی حسین</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            direction: rtl;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>سایت شخصی حسین</h1>
+</header>
+
+<nav>
+    <a href="#" onclick="showSection('about-me')">درباره من</a>
+    <a href="#" onclick="showSection('about-salma')">درباره سلما</a>
+</nav>
+
+<div class="container">
+    <!-- بخش درباره من -->
+    <div id="about-me" class="content section active">
+        <img src="https://via.placeholder.com/150" alt="حسین" class="profile-pic">
+        <h2>درباره من</h2>
+        <p>
+            سلام! من حسین هستم. من ۱۴ سال دارم و در کلاس نهم تحصیل می‌کنم. 
+            خیلی علاقه‌مند به یادگیری تکنولوژی و برنامه‌نویسی هستم. 
+            همیشه در تلاش برای بهبود مهارت‌های خودم و یاد گرفتن چیزهای جدید هستم.
+        </p>
+    </div>
+
+    <!-- بخش درباره سلما -->
+    <div id="about-salma" class="content section">
+        <img src="https://via.placeholder.com/150" alt="سلما" class="profile-pic">
+        <h2>درباره سلما</h2>
+        <p>
+            سلام! من **سلما** هستم. من نقاشی کردن رو خیلی دوست دارم و همیشه وقت فراغت خودم رو به نقاشی اختصاص میدم.
+            فردا آخرین روز مدرسه‌ام است و خیلی هیجان‌زده هستم!
+        </p>
+    </div>
+</div>
+
+<footer>
+    <p>تمامی حقوق برای حسین و سلما محفوظ است &copy; 2025</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        // پنهان کردن تمام بخش‌ها
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // نمایش بخش انتخاب شده
+        const selectedSection = document.getElementById(sectionId);
+        selectedSection.classList.add('active');
+    }
+</script>
+
+</body>
+</html>
