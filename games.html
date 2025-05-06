@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی‌ها</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>بازی‌ها</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">صفحه اصلی</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="reverseTextGame">
+        <h2>بازی معکوس نویسی</h2>
+        <p>در این بازی، یک جمله به شما داده می‌شود و شما باید آن را معکوس بنویسید.</p>
+        <!-- معکوس نویسی در اینجا پیاده‌سازی می‌شود -->
+        <input type="text" id="inputText" placeholder="جمله را وارد کنید">
+        <button onclick="reverseText()">معکوس کردن</button>
+        <p id="reversedText"></p>
+    </section>
+
+    <section id="memoryGame">
+        <h2>بازی حافظه</h2>
+        <p>یک بازی ساده برای تقویت حافظه که کارت‌ها باید به درستی جفت شوند.</p>
+        <!-- بازی حافظه در اینجا پیاده‌سازی می‌شود -->
+        <div id="memory-board"></div>
+        <script>
+            // کد بازی حافظه در اینجا قرار می‌گیرد.
+        </script>
+    </section>
+
+    <section id="puzzleGame">
+        <h2>بازی پازل</h2>
+        <p>پازل را حل کن!</p>
+        <!-- بازی پازل در اینجا پیاده‌سازی می‌شود -->
+        <div id="puzzle-board"></div>
+        <script>
+            // کد بازی پازل در اینجا قرار می‌گیرد.
+        </script>
+    </section>
+
+    <footer>
+        <p>برای ارتباط با من می‌توانید از طریق ایمیل <a href="mailto:hjavdan61@gmail.com">hjavdan61@gmail.com</a> با من تماس بگیرید.</p>
+    </footer>
+
+    <script>
+        // کد بازی معکوس نویسی
+        function reverseText() {
+            var inputText = document.getElementById("inputText").value;
+            var reversed = inputText.split("").reverse().join("");
+            document.getElementById("reversedText").innerText = reversed;
+        }
+    </script>
+</body>
+</html>
