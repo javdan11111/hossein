@@ -1,94 +1,63 @@
-/* فونت‌ها */
+
+/* تنظیم کلی صفحه */
 body {
-  font-family: 'Vazir', sans-serif;
+    direction: rtl;
+    font-family: 'Tahoma', sans-serif;
+    background: linear-gradient(to right, #ffffff, #007BFF);
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2 {
-  font-family: 'BTitr', sans-serif;
+/* سبک‌دهی به تیتر اصلی */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 40px;
+    color: #004080;
+    font-family: 'IranNastaliq', cursive;
 }
 
-p {
-  font-family: 'IranianSans', sans-serif;
+/* سبک‌دهی به زیرعنوان‌ها */
+h2 {
+    text-align: right;
+    padding-right: 20px;
+    color: #ffffff;
+    background-color: #0056b3;
+    padding: 10px;
 }
 
-/* تنظیمات عمومی */
-body {
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, p {
-  margin: 20px;
-  text-align: center;
-}
-
-/* استایل برای منو */
-nav {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* استایل بخش‌ها */
+/* تنظیمات بخش‌ها */
 .section {
-  display: none;
-  animation: fadeIn 1s ease-in-out;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffffaa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.welcome {
-  display: block;
-  text-align: center;
-  font-family: 'Vazir', sans-serif;
-  font-size: 30px;
-  color: #333;
-  margin-top: 50px;
-  animation: fadeIn 2s ease-in-out;
+/* استایل دکمه‌ها */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+button:hover {
+    background-color: #0056b3;
 }
 
-section.active {
-  display: block;
+/* تنظیم انیمیشن ساده هنگام جابجایی بین بخش‌ها */
+.fade {
+    animation: fadein 0.6s;
 }
 
-/* استایل فوتر */
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-footer a {
-  color: white;
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
