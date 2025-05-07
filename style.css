@@ -1,0 +1,94 @@
+/* فونت‌ها */
+body {
+  font-family: 'Vazir', sans-serif;
+}
+
+h1, h2 {
+  font-family: 'BTitr', sans-serif;
+}
+
+p {
+  font-family: 'IranianSans', sans-serif;
+}
+
+/* تنظیمات عمومی */
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, p {
+  margin: 20px;
+  text-align: center;
+}
+
+/* استایل برای منو */
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* استایل بخش‌ها */
+.section {
+  display: none;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.welcome {
+  display: block;
+  text-align: center;
+  font-family: 'Vazir', sans-serif;
+  font-size: 30px;
+  color: #333;
+  margin-top: 50px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section.active {
+  display: block;
+}
+
+/* استایل فوتر */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: white;
+}
